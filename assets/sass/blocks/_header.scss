@@ -1,13 +1,19 @@
-.pre-header {
-    padding: 5px 0;
-    background-color: $preHeaderBgColor;
-    color: $preHeaderColor;
-}
-
-.page-header {
-    padding: 10px 0;
-    background-color: $headerBgColor;
+.header {
+    position: relative;
     color: $headerFontColor;
+    font-size: 12px;
+    font-weight: 300;
+    background-color: $headerBgColor;
+
+    &-info {
+        line-height: 1.5;
+        padding: 11px 0;
+    }
+
+    &-btn {
+        float: right;
+        order: 1;
+    }
 }
 
 .logo {
@@ -17,27 +23,89 @@
         display: inline-block;
         vertical-align: middle;
     }
+
+    &-img {
+        max-width: 195px;
+        max-height: 31px;
+    }
+
+    &-desc {
+        display: block;
+        margin-top: 5px;
+        font-size: 11px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 }
 
 .phone {
     @extend %reset-list;
+    font-size: 0;
 
-    &,
     &-item {
+        width: 25%;
         display: inline-block;
         vertical-align: middle;
+        border: 1px solid #d9eafd;
+        border-top: 0;
+        margin-right: -1px;
+        min-width: 115px;
     }
 
-    &-item {
-        margin: 0 5px;
+    &-item,
+    &-number {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5;
     }
 
     &-number {
-        display: inline-block;
+        display: block;
+        padding: 11px 5px;
         text-decoration: none;
+        white-space: nowrap;
 
         &:hover {
             text-decoration: underline;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 4px;
+            width: 12px;
+            height: 12px;
+            background: image-url('telephone.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        &[href*="+38067"],
+        &[href*="+38068"],
+        &[href*="+38096"],
+        &[href*="+38097"],
+        &[href*="+38098"] {
+            &::before {
+                background-image: image-url('kyivstar.png');
+            }
+        }
+
+        &[href*="+38050"],
+        &[href*="+38066"],
+        &[href*="+38095"],
+        &[href*="+38099"] {
+            &::before {
+                background-image: image-url('vodafone.png');
+            }
+        }
+
+        &[href*="+38063"],
+        &[href*="+38073"],
+        &[href*="+38093"] {
+            &::before {
+                background-image: image-url('lifecell.png');
+            }
         }
     }
 }

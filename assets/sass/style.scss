@@ -19,7 +19,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "core/fonts";
 @import "core/wp-core";
 @import "core/help-style";
-//@import "core/flexbox";
+@import "core/flexbox";
 
 // PLUG-INs
 @import "plugins/font-awesome/font-awesome";
@@ -104,7 +104,7 @@ body {
     min-height: 100%;
 
     @media #{$mobile} {
-        padding-top: 80px;
+        padding-top: 70px;
     }
 }
 
@@ -172,4 +172,90 @@ img {
 
 .is-hide {
     display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .header {
+        padding-top: 10px;
+
+        &-btn {
+            order: 0;
+        }
+
+        &-phones {
+            border-top: 1px solid #d9eafd;
+            margin-top: 10px;
+        }
+    }
+
+    .logo {
+        &-desc {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .nav {
+        .menu {
+            &-container {
+                display: block;
+            }
+
+            &-item {
+                display: inline-block;
+                //padding: 0 10px;
+                border-bottom: 1px solid #d9eafd;
+            }
+
+            &-link {
+               // padding: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 544px) {
+    .nav {
+        border-top: 0;
+    }
+
+    .header {
+        padding-top: 0;
+        border-bottom: 1px solid #d9eafd;
+        margin-bottom: 15px;
+
+        &-logo {
+            display: none;
+        }
+
+        &-row,
+        &-info {
+            display: block;
+        }
+
+        &-btn,
+        &-details {
+            text-align: center;
+        }
+
+        &-info {
+            padding: 5px 0;
+
+            span {
+                display: block;
+                padding: 2px 0;
+            }
+        }
+    }
+
+    .phone {
+        &-item {
+            width: 50%;
+        }
+
+        &-number {
+            padding: 5px;
+        }
+    }
 }

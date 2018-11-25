@@ -8,9 +8,10 @@
     height: auto;
     cursor: pointer;
     font-size: 16px;
-    border: 1px solid $buttonOutlinedFirstColor;
+    border: 2px solid $buttonBorderColor;
     background-color: $buttonOutlinedSecondColor;
     box-shadow: none;
+    text-transform: uppercase;
     line-height: 1 !important;
 
     color: $buttonOutlinedFirstColor;
@@ -31,16 +32,16 @@
     }
 
     &.button-inverse {
-        background: $buttonOutlinedFirstColor;
+        background: $buttonBorderColor;
         color: $buttonOutlinedSecondColor;
         &:hover, &:active {
             color: $buttonOutlinedFirstColor;
-            background: $buttonOutlinedSecondColor;
+            background: transparent;
         }
     }
 
     &:hover, &:active {
-        background-color: $buttonOutlinedFirstColor;
+        background-color: $buttonBorderColor;
         color: $buttonOutlinedSecondColor;
     }
 
