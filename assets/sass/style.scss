@@ -218,6 +218,33 @@ img {
 @media only screen and (max-width: 544px) {
     .nav {
         border-top: 0;
+
+        .menu {
+            &-item {
+                display: block;
+                text-align: center;
+                border: 0;
+
+                &:first-child {
+                    border-left: 0;
+                }
+            }
+
+            &-link {
+                display: inline-block;
+                padding: 10px;
+            }
+        }
+
+        .sub-menu {
+            border: 0;
+
+            &-item {
+                + .sub-menu-item {
+                    border-top: 1px solid #333;
+                }
+            }
+        }
     }
 
     .header {

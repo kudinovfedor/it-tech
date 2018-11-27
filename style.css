@@ -6649,6 +6649,19 @@ img {
 @media only screen and (max-width: 544px) {
   .nav {
     border-top: 0; }
+    .nav .menu-item {
+      display: block;
+      text-align: center;
+      border: 0; }
+      .nav .menu-item:first-child {
+        border-left: 0; }
+    .nav .menu-link {
+      display: inline-block;
+      padding: 10px; }
+    .nav .sub-menu {
+      border: 0; }
+      .nav .sub-menu-item + .sub-menu-item {
+        border-top: 1px solid #333; }
   .header {
     padding-top: 0;
     border-bottom: 1px solid #d9eafd;
