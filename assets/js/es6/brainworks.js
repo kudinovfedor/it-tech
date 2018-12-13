@@ -17,6 +17,8 @@
 
         html.removeClass('no-js').addClass('js');
 
+        stickyMenu();
+
         reviews('.js-reviews');
         scrollTop('.js-scroll-top');
         stickFooter('.js-footer', '.js-container');
@@ -34,6 +36,41 @@
             }
         });
     });
+
+    /**
+     * Sticky Menu
+     *
+     * @param {string} [element=.js-menu]
+     * @param {string} [space=.js-menu-space]
+     * @returns {void}
+     */
+    const stickyMenu = (element = '.js-menu', space = '.js-menu-space') => {
+        const className = 'is-sticky';
+        const menu = d.querySelector(element);
+        const menuSpace = d.querySelector(space);
+        const menuHeight = menu.offsetHeight;
+        const menuOffsetTop = menu.offsetTop;
+
+        let scrollTop = 0;
+        let hasClass = false;
+
+        if(w.innerWidth > 544) {
+            w.addEventListener('scroll', () => {
+                scrollTop = w.scrollY || w.pageYOffset;
+                hasClass = menu.classList.contains(className);
+
+                if (scrollTop > menuOffsetTop && !hasClass) {
+                    menuSpace.style.height = `${menuHeight}px`;
+                    menu.classList.add(className);
+                }
+
+                if (scrollTop <= menuOffsetTop && hasClass) {
+                    menuSpace.style.height = 0;
+                    menu.classList.remove(className);
+                }
+            });
+        }
+    };
 
     /**
      * Stick Footer

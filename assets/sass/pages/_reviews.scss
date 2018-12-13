@@ -3,7 +3,7 @@ $review-title-font-size: 16px;
 
 $review-social-size: 25px;
 $review-social-color: #fff;
-$review-social-background: #333;
+$review-social-background: $themeColorTwo;
 
 $review-social-hover-color: #fff;
 $review-social-hover-background: #2c3e50;
@@ -156,7 +156,7 @@ $review-arrow-hover-background: #2c3e50;
 
             .slick {
                 &-arrow {
-                    top: 40px;
+                    top: 50%;
                     margin-top: 0;
                 }
             }

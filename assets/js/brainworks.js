@@ -12,6 +12,7 @@
             html.addClass("is-mobile");
         }
         html.removeClass("no-js").addClass("js");
+        stickyMenu();
         reviews(".js-reviews");
         scrollTop(".js-scroll-top");
         stickFooter(".js-footer", ".js-container");
@@ -26,6 +27,31 @@
             }
         });
     });
+    var stickyMenu = function stickyMenu() {
+        var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ".js-menu";
+        var space = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ".js-menu-space";
+        var className = "is-sticky";
+        var menu = d.querySelector(element);
+        var menuSpace = d.querySelector(space);
+        var menuHeight = menu.offsetHeight;
+        var menuOffsetTop = menu.offsetTop;
+        var scrollTop = 0;
+        var hasClass = false;
+        if (w.innerWidth > 544) {
+            w.addEventListener("scroll", function() {
+                scrollTop = w.scrollY || w.pageYOffset;
+                hasClass = menu.classList.contains(className);
+                if (scrollTop > menuOffsetTop && !hasClass) {
+                    menuSpace.style.height = "".concat(menuHeight, "px");
+                    menu.classList.add(className);
+                }
+                if (scrollTop <= menuOffsetTop && hasClass) {
+                    menuSpace.style.height = 0;
+                    menu.classList.remove(className);
+                }
+            });
+        }
+    };
     var stickFooter = function stickFooter(footer, container) {
         var el = $(footer);
         var height = el.outerHeight() + 20 + "px";

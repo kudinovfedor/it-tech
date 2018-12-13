@@ -1,6 +1,6 @@
 'use strict';
 
-const themeName = 'brainworks';
+const themeName = 'it-tech';
 
 import gulp from 'gulp';
 import zip from 'gulp-zip';

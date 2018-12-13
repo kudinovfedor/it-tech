@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-lg-3 header-btn text-right">
-                    <button type="button" class="button-medium <?php the_lang_class('js-call-back'); ?>">
+                    <button type="button" class="button-small <?php the_lang_class('js-call-back'); ?>">
                         <?php _e('Free consultation', 'brainworks'); ?>
                     </button>
                 </div>
@@ -66,8 +66,9 @@
                         </ul>
                     <?php } ?>
                     <div class="header-info d-flex flex-wrap justify-content-between">
-                        <span>Ремонт ноутбуків та смартфонів в Івано-Франківську</span>
-                        <span>Працюємо без вихідних 9.00 - 19.00</span>
+                        <span>Ремонт та продаж комп'ютерної техніки в Івано-Франківську</span>
+                        <!--<span>Ремонт ноутбуків та смартфонів в Івано-Франківську</span>-->
+                        <span>Працюємо ПН-ПТ с 9.00 до 19.00</span>
                     </div>
                 </div>
             </div>
@@ -88,6 +89,7 @@
                 <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
             </div>
         </nav>
+        <div class="nav-space js-menu-space"></div>
     <?php } ?>
 
     <div class="container js-container">

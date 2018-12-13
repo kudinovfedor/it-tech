@@ -7,10 +7,10 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 1.0.0
+Version: 11.12.18
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
-
+ 
 // CORE
 @import "core/reset";
 @import "core/mediaqueries";
@@ -36,7 +36,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "pages/single-post";
 @import "pages/blog-page";
 @import "pages/reviews";
-//@import "pages/woo";
+@import "pages/woo";
 
 // ELEMENTS
 @import "elements/typography";
@@ -173,6 +173,38 @@ img {
 .is-hide {
     display: none;
 }
+
+
+.custom-card {
+    margin-bottom: 30px;
+    
+    .custom-card-image {
+        margin-bottom: 15px;
+    }
+    
+    .custom-card-body {
+        text-align: justify;
+    }
+}
+
+.working {
+    display: flex;
+    align-items: center;
+    
+    .num {
+        margin-right: 10px;
+        font-size: 70px;
+        color: $themeColorTwo;
+        font-weight: 800;
+    }
+    
+    .text {
+        text-transform: uppercase;
+        //font-weight: 400;
+        font-weight: 800;
+    }
+}
+
 
 @media only screen and (max-width: 1024px) {
     .header {

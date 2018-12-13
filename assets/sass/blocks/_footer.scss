@@ -6,8 +6,24 @@
 }
 
 .pre-footer {
-    padding: 20px 0;
+    padding: 30px 0 10px;
     background-color: lighten($footerBgColor, 10%);
+    text-align: center;
+    color: white;
+    
+    a, h6 {
+        color: white;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .button-small {
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 .copyright {
