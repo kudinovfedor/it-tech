@@ -6459,7 +6459,7 @@ a:hover .fa {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 31;
   background-color: #fff;
   -webkit-box-shadow: 0 0 10px rgba(48, 48, 48, 0.15);
   box-shadow: 0 0 10px rgba(48, 48, 48, 0.15);
